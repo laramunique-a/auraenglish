@@ -26,7 +26,7 @@ export default function Home() {
       <Navbar onOpenBooking={handleOpenBooking} />
 
       {/* Main Landing Sections */}
-      <HeroSection onOpenBooking={handleOpenBooking} />
+      <HeroSection />
       <AboutSection />
       <WhyAuraSection />
       <MethodSection />

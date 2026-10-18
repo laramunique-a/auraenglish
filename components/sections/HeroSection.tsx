@@ -4,11 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Compass, ShieldCheck } from 'lucide-react';
 
-interface HeroSectionProps {
-  onOpenBooking: () => void;
-}
-
-export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
+export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 sm:px-8 overflow-hidden bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
@@ -41,13 +37,14 @@ export default function HeroSection({ onOpenBooking }: HeroSectionProps) {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
           >
-            <button
-              onClick={onOpenBooking}
+            <a
+              id="hero-quero-ser-fluente"
+              href="#classes"
               className="w-full sm:w-auto py-4 px-8 rounded-full btn-primary-bloom text-white font-medium text-sm flex items-center justify-center gap-3 group"
             >
-              <span>Agende sua primeira aula</span>
+              <span>Quero ser fluente</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
 
             <a
               href="#method"
