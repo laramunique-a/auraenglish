@@ -98,11 +98,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-base text-slate-600 font-comfortaa leading-relaxed">
-              A Aura English foi criada para alunos que buscam mais do que aulas tradicionais. Aqui, o aprendizado é personalizado, prático e focado na comunicação real.
-            </p>
-
-            <p className="text-base text-slate-600 font-comfortaa leading-relaxed">
-              Seja para viajar, trabalhar internacionalmente ou simplesmente falar com segurança, cada aula é desenhada para a sua jornada pessoal.
+              Com o app AuraUP você aprende inglês jogando e se divertindo! Aprenda palavras novas, adquira fluência, ganhe XP e entre em competição com seus colegas subindo de nível a cada aula.
             </p>
 
             <div className="pt-4 grid grid-cols-2 gap-4">
