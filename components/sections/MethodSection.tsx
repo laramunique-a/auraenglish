@@ -29,7 +29,7 @@ export default function MethodSection() {
           </p>
         </motion.div>
 
-        {/* Methodology Cycle Diagram */}
+        {/* Methodology Cycle Diagram - Seamlessly integrated without borders/frames */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 24 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
@@ -37,14 +37,14 @@ export default function MethodSection() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex justify-center items-center"
         >
-          <div className="relative w-full max-w-4xl rounded-3xl bg-white/80 backdrop-blur-xl p-4 sm:p-8 md:p-12 border border-slate-200/80 shadow-xl shadow-slate-200/40 flex justify-center items-center overflow-hidden group">
+          <div className="relative w-full max-w-3xl flex justify-center items-center">
             <Image
               src="/metodologia-ingles-360.png"
               alt="Metodologia Inglês 360° - Aura English"
               width={1024}
               height={764}
               priority
-              className="w-full h-auto max-w-3xl object-contain drop-shadow-sm transition-transform duration-500 group-hover:scale-[1.01]"
+              className="w-full h-auto object-contain mix-blend-multiply"
             />
           </div>
         </motion.div>
