@@ -28,8 +28,8 @@ export default function Home() {
       {/* Main Landing Sections */}
       <HeroSection />
       <AboutSection />
-      <WhyAuraSection />
       <MethodSection />
+      <WhyAuraSection />
       <ExperienceSection />
       <ClassesSection onOpenBooking={handleOpenBooking} />
       <TestimonialsSection />
