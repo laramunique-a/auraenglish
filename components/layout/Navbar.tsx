@@ -5,10 +5,13 @@ import Image from 'next/image';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+const AURAUP_LOGIN_URL = 'https://auraup.auraenglish.com.br/login';
+
 interface NavbarProps {
   onOpenBooking: () => void;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function Navbar({ onOpenBooking }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -76,13 +79,16 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
 
           {/* Action Button */}
           <div className="hidden md:flex items-center gap-4">
-            <button
-              onClick={onOpenBooking}
+            <a
+              id="navbar-auraup-login"
+              href={AURAUP_LOGIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="py-2.5 px-5 rounded-full btn-primary-bloom text-white text-xs font-semibold tracking-wide flex items-center gap-2"
             >
-              <span>Agende sua primeira aula</span>
+              <span>AuraUP Login</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile Hamburger Toggle */}
@@ -120,16 +126,17 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
             </div>
 
             <div className="pt-6">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenBooking();
-                }}
+              <a
+                id="mobile-auraup-login"
+                href={AURAUP_LOGIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-4 rounded-full btn-primary-bloom text-white font-medium text-sm flex items-center justify-center gap-2"
               >
-                <span>Agende sua primeira aula</span>
+                <span>AuraUP Login</span>
                 <ArrowUpRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </motion.div>
         )}
