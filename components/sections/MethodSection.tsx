@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowDown } from 'lucide-react';
 
 interface HollowCurvedArrowProps {
   rotation: number;
@@ -84,7 +85,7 @@ export default function MethodSection() {
   }, []);
 
   return (
-    <section id="method" className="scroll-mt-16 py-6 sm:py-8 px-6 sm:px-8 relative z-10 overflow-hidden">
+    <section id="method" className="scroll-mt-16 py-8 sm:py-10 px-5 sm:px-8 relative z-10 overflow-hidden">
       {/* Glow highlight */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[420px] bg-[#2563eb]/5 rounded-full blur-[140px] pointer-events-none" />
 
@@ -95,27 +96,27 @@ export default function MethodSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-2xl mx-auto space-y-3"
+          className="text-center max-w-2xl mx-auto space-y-2 sm:space-y-3"
         >
           <span className="text-xs font-public-sans text-[#2563eb] uppercase tracking-widest font-bold">
             Metodologia
           </span>
-          <h2 className="text-3xl sm:text-5xl font-metrophobic text-slate-900 leading-tight">
+          <h2 className="text-2xl sm:text-5xl font-metrophobic text-slate-900 leading-tight">
             Inglês 360°
           </h2>
         </motion.div>
 
         {/* Interactive 360° Cycle Diagram - Dedicated 3x3 Grid so arrows never overlap text/images */}
         <div className="relative max-w-6xl mx-auto">
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-x-8 md:gap-y-2 items-center">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-x-8 md:gap-y-2 items-center">
             {/* CORNER 1 (Row 1, Col 1 on Desktop): Top-Left Arrow (Left -> Top) */}
             <div className="hidden md:flex md:col-start-1 md:row-start-1 items-end justify-end pr-4 pb-2 h-full">
               <HollowCurvedArrow rotation={0} isActive={activeArrow === 0} />
             </div>
 
             {/* TOP NODE (Row 1, Col 2 on Desktop): App para Memorização */}
-            <div className="md:col-start-2 md:row-start-1 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+            <div className="order-1 md:order-none md:col-start-2 md:row-start-1 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
+              <div className="w-28 h-28 sm:w-40 sm:h-40 flex items-center justify-center mb-2.5 sm:mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-app.png"
                   alt="App para Memorização"
@@ -126,12 +127,17 @@ export default function MethodSection() {
                 />
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+              <h3 className="text-lg sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
                 App para Memorização
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
+              <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
                 Aplicativo de Memorização para ajudar os alunos a memorizar as palavras e frases-chave de cada aula e consolidar seu vocabulário
               </p>
+
+              {/* Mobile Flow Connector */}
+              <div className="md:hidden pt-4 text-[#2563eb]/60">
+                <ArrowDown className="w-5 h-5 animate-bounce" />
+              </div>
             </div>
 
             {/* CORNER 2 (Row 1, Col 3 on Desktop): Top-Right Arrow (Top -> Right) */}
@@ -140,8 +146,8 @@ export default function MethodSection() {
             </div>
 
             {/* LEFT NODE (Row 2, Col 1 on Desktop): Aulas 100% em inglês */}
-            <div className="md:col-start-1 md:row-start-2 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+            <div className="order-4 md:order-none md:col-start-1 md:row-start-2 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
+              <div className="w-28 h-28 sm:w-40 sm:h-40 flex items-center justify-center mb-2.5 sm:mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-aulas.png"
                   alt="Aulas 100% em inglês"
@@ -152,10 +158,10 @@ export default function MethodSection() {
                 />
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+              <h3 className="text-lg sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
                 Aulas 100% em inglês
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
+              <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
                 Desde a primeira aula, você terá um ambiente 100% em inglês para o seu nível, mesmo para um completo iniciante
               </p>
             </div>
@@ -190,8 +196,8 @@ export default function MethodSection() {
             </div>
 
             {/* RIGHT NODE (Row 2, Col 3 on Desktop): Conversation */}
-            <div className="md:col-start-3 md:row-start-2 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+            <div className="order-2 md:order-none md:col-start-3 md:row-start-2 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
+              <div className="w-28 h-28 sm:w-40 sm:h-40 flex items-center justify-center mb-2.5 sm:mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-conversation.png"
                   alt="Conversation"
@@ -202,12 +208,17 @@ export default function MethodSection() {
                 />
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+              <h3 className="text-lg sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
                 Conversation
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
+              <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
                 Destrave a fluência colocando em prática a teoria e as palavras da aula anterior
               </p>
+
+              {/* Mobile Flow Connector */}
+              <div className="md:hidden pt-4 text-[#2563eb]/60">
+                <ArrowDown className="w-5 h-5 animate-bounce" />
+              </div>
             </div>
 
             {/* CORNER 4 (Row 3, Col 1 on Desktop): Bottom-Left Arrow (Bottom -> Left) */}
@@ -216,8 +227,8 @@ export default function MethodSection() {
             </div>
 
             {/* BOTTOM NODE (Row 3, Col 2 on Desktop): Avaliação Personalizada */}
-            <div className="md:col-start-2 md:row-start-3 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+            <div className="order-3 md:order-none md:col-start-2 md:row-start-3 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
+              <div className="w-28 h-28 sm:w-40 sm:h-40 flex items-center justify-center mb-2.5 sm:mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-avaliacao.png"
                   alt="Avaliação Personalizada"
@@ -228,12 +239,17 @@ export default function MethodSection() {
                 />
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+              <h3 className="text-lg sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
                 Avaliação Personalizada
               </h3>
-              <p className="mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
+              <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
                 Cada aluno tem sua avaliação através de notas, garantindo um feedback constante e específico com um progresso consistente
               </p>
+
+              {/* Mobile Flow Connector */}
+              <div className="md:hidden pt-4 text-[#2563eb]/60">
+                <ArrowDown className="w-5 h-5 animate-bounce" />
+              </div>
             </div>
 
             {/* CORNER 3 (Row 3, Col 3 on Desktop): Bottom-Right Arrow (Right -> Bottom) */}

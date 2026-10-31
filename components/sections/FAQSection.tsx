@@ -39,30 +39,30 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="scroll-mt-20 py-12 sm:py-16 px-6 sm:px-8 relative z-10">
-      <div className="max-w-4xl mx-auto w-full space-y-12">
+    <section id="faq" className="scroll-mt-20 py-10 sm:py-16 px-5 sm:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto w-full space-y-8 sm:space-y-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center space-y-3"
+          className="text-center space-y-2.5 sm:space-y-3"
         >
           <div className="inline-flex items-center gap-2 text-xs font-public-sans text-[#2563eb] uppercase tracking-widest font-bold">
             <HelpCircle className="w-3.5 h-3.5" />
             Tire Suas Dúvidas
           </div>
-          <h2 className="text-3xl sm:text-5xl font-metrophobic text-slate-900">
+          <h2 className="text-2xl sm:text-5xl font-metrophobic text-slate-900">
             Perguntas Frequentes
           </h2>
-          <p className="text-base text-slate-600 font-comfortaa">
+          <p className="text-sm sm:text-base text-slate-600 font-comfortaa">
             Tudo o que você precisa saber para iniciar sua jornada com a Aura.
           </p>
         </motion.div>
 
         {/* Accordion List */}
-        <div className="space-y-4">
+        <div className="space-y-3.5 sm:space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -76,7 +76,7 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => toggleIndex(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-metrophobic text-lg text-slate-900 font-semibold hover:text-[#2563eb] transition-colors focus:outline-none"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-metrophobic text-base sm:text-lg text-slate-900 font-semibold hover:text-[#2563eb] transition-colors focus:outline-none"
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>
@@ -98,7 +98,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 text-sm text-slate-600 font-comfortaa leading-relaxed border-t border-slate-100 pt-4 space-y-4">
+                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 font-comfortaa leading-relaxed border-t border-slate-100 pt-4 space-y-4">
                         <p className="whitespace-pre-line">{faq.answer}</p>
                         {faq.hasWhatsappCTA && (
                           <div>

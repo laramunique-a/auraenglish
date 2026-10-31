@@ -6,16 +6,16 @@ import { ArrowRight, Compass } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative flex items-center justify-center pt-28 pb-12 sm:pt-36 sm:pb-16 px-6 sm:px-8 overflow-hidden bg-[#f8fafc]">
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
+    <section className="relative flex items-center justify-center pt-28 pb-10 sm:pt-36 sm:pb-16 px-5 sm:px-8 overflow-hidden bg-[#f8fafc]">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center relative z-10">
         {/* Hero Content (Left 7 Cols) */}
-        <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
+        <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
           {/* Main Headline with Blur + Fade Up */}
           <motion.h1
             initial={{ opacity: 0, filter: 'blur(10px)', y: 20 }}
             animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-4xl sm:text-6xl lg:text-7xl font-metrophobic tracking-tight text-slate-900 leading-[1.1]"
+            className="text-3xl sm:text-6xl lg:text-7xl font-metrophobic tracking-tight text-slate-900 leading-[1.15] sm:leading-[1.1]"
           >
             Expanda seu mundo através do <span className="bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#fc9103] bg-clip-text text-transparent">Inglês</span>.
           </motion.h1>
@@ -25,7 +25,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-base sm:text-lg text-slate-600 font-comfortaa max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            className="text-sm sm:text-lg text-slate-600 font-comfortaa max-w-2xl mx-auto lg:mx-0 leading-relaxed"
           >
             Aprender inglês não é sobre memorizar regras gramaticais. É sobre construir confiança, criar oportunidades e se tornar a pessoa que você deseja ser.
           </motion.p>
@@ -35,7 +35,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2"
+            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 sm:gap-4 pt-1 sm:pt-2"
           >
             <a
               id="hero-quero-ser-fluente"
@@ -56,8 +56,8 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Abstract Cosmic Tech Visual Container (Right 5 Cols) */}
-        <div className="lg:col-span-5 relative flex items-center justify-center">
+        {/* Abstract Cosmic Tech Visual Container (Right 5 Cols - Desktop Only) */}
+        <div className="hidden lg:flex lg:col-span-5 relative items-center justify-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -62,23 +62,23 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="scroll-mt-20 py-12 sm:py-16 px-6 sm:px-8 relative z-10">
-      <div className="max-w-7xl mx-auto w-full space-y-12">
+    <section className="scroll-mt-20 py-10 sm:py-16 px-5 sm:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto w-full space-y-8 sm:space-y-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-2xl mx-auto space-y-3"
+          className="text-center max-w-2xl mx-auto space-y-2.5 sm:space-y-3"
         >
           <span className="text-xs font-public-sans text-[#2563eb] uppercase tracking-widest font-bold">
             Depoimentos
           </span>
-          <h2 className="text-3xl sm:text-5xl font-metrophobic text-slate-900">
+          <h2 className="text-2xl sm:text-5xl font-metrophobic text-slate-900">
             Alunos reais. Transformação real.
           </h2>
-          <p className="text-base text-slate-600 font-comfortaa">
+          <p className="text-sm sm:text-base text-slate-600 font-comfortaa">
             Histórias de pessoas que expandiram seu mundo através do inglês.
           </p>
 
@@ -88,7 +88,7 @@ export default function TestimonialsSection() {
               href={GOOGLE_REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white hover:bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 group"
+              className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 px-4 sm:px-5 py-2.5 rounded-2xl sm:rounded-full bg-white hover:bg-slate-50 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 group"
             >
               {/* Google "G" Icon */}
               <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -125,8 +125,8 @@ export default function TestimonialsSection() {
 
         {/* Carousel Box */}
         <div className="max-w-4xl mx-auto relative">
-          <div className="glass-panel rounded-3xl p-8 sm:p-12 relative overflow-hidden border border-slate-200 shadow-xl min-h-[300px] flex flex-col justify-between">
-            <Quote className="absolute top-6 right-6 w-16 h-16 text-slate-200/60 pointer-events-none" />
+          <div className="glass-panel rounded-3xl p-6 sm:p-12 relative overflow-hidden border border-slate-200 shadow-xl min-h-[260px] sm:min-h-[300px] flex flex-col justify-between">
+            <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 sm:w-16 sm:h-16 text-slate-200/60 pointer-events-none" />
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -135,7 +135,7 @@ export default function TestimonialsSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="space-y-6"
+                className="space-y-4 sm:space-y-6"
               >
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1 text-amber-500">
@@ -146,19 +146,19 @@ export default function TestimonialsSection() {
                   <span className="text-xs font-public-sans text-slate-400">• Google Reviews</span>
                 </div>
 
-                <p className="text-lg sm:text-xl text-slate-800 font-comfortaa leading-relaxed italic">
+                <p className="text-base sm:text-xl text-slate-800 font-comfortaa leading-relaxed italic">
                   &ldquo;{testimonials[currentIndex].text}&rdquo;
                 </p>
 
                 <div className="flex items-center justify-between gap-4 pt-4 border-t border-slate-200 flex-wrap">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3 sm:gap-4">
                     <div
-                      className={`w-12 h-12 rounded-full bg-gradient-to-tr ${testimonials[currentIndex].gradient} flex items-center justify-center text-white font-metrophobic font-bold text-sm shadow-md`}
+                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr ${testimonials[currentIndex].gradient} flex items-center justify-center text-white font-metrophobic font-bold text-xs sm:text-sm shadow-md flex-shrink-0`}
                     >
                       {testimonials[currentIndex].initials}
                     </div>
                     <div>
-                      <h4 className="text-base font-metrophobic text-slate-900 font-bold">
+                      <h4 className="text-sm sm:text-base font-metrophobic text-slate-900 font-bold">
                         {testimonials[currentIndex].name}
                       </h4>
                       <p className="text-xs text-slate-500 font-public-sans">
