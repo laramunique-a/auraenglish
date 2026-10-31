@@ -77,16 +77,6 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-
-            <div className="space-y-3">
-              <h4 className="text-xs font-public-sans uppercase tracking-widest text-slate-900 font-semibold">
-                Legal
-              </h4>
-              <ul className="space-y-2 text-slate-500">
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Política de Privacidade</a></li>
-                <li><a href="#" className="hover:text-slate-900 transition-colors">Termos de Serviço</a></li>
-              </ul>
-            </div>
           </div>
         </div>
 
