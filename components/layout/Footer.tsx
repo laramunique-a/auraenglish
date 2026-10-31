@@ -7,11 +7,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="relative z-10 border-t border-slate-200 bg-white/80 backdrop-blur-xl pt-16 pb-12 px-6 sm:px-8">
-      <div className="max-w-7xl mx-auto space-y-12">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 text-center md:text-left">
+    <footer id="contact" className="relative z-10 border-t border-slate-200 bg-white/80 backdrop-blur-xl py-6 px-6 sm:px-8">
+      <div className="max-w-7xl mx-auto space-y-5">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 text-center md:text-left">
           {/* Logo & Tagline */}
-          <div className="space-y-4 max-w-sm">
+          <div className="space-y-2 max-w-sm">
             <a href="#" className="relative flex items-center gap-3 group justify-center md:justify-start">
               <Image
                 src="/logo-aura-icon.png"
@@ -19,13 +19,13 @@ export default function Footer() {
                 width={64}
                 height={64}
                 unoptimized
-                className="h-12 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
-              <span className="text-2xl font-comfortaa font-bold text-slate-900 leading-tight">
+              <span className="text-xl font-comfortaa font-bold text-slate-900 leading-tight">
                 Aura <span className="text-[#2563eb]">English</span>
               </span>
             </a>
-            <p className="text-sm font-metrophobic text-[#2563eb] tracking-widest uppercase font-semibold">
+            <p className="text-xs font-metrophobic text-[#2563eb] tracking-widest uppercase font-semibold">
               Expanda seus horizontes.
             </p>
             <p className="text-xs text-slate-500 font-comfortaa leading-relaxed">
@@ -34,12 +34,12 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-wrap justify-center md:justify-end gap-10 text-sm font-comfortaa">
-            <div className="space-y-3">
+          <div className="flex flex-wrap justify-center md:justify-end gap-8 text-sm font-comfortaa">
+            <div className="space-y-2">
               <h4 className="text-xs font-public-sans uppercase tracking-widest text-slate-900 font-semibold">
                 Contato
               </h4>
-              <ul className="space-y-2 text-slate-600">
+              <ul className="space-y-1.5 text-slate-600">
                 <li>
                   <a
                     href="https://www.instagram.com/julianoteacher/"
@@ -81,8 +81,21 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright Bar */}
-        <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-public-sans gap-4">
-          <p>© {currentYear} Aura English. Todos os direitos reservados.</p>
+        <div className="pt-4 border-t border-slate-200 flex flex-col sm:flex-row items-center sm:items-start justify-between text-xs text-slate-500 font-public-sans gap-2">
+          <div className="space-y-1 text-center sm:text-left">
+            <p>© {currentYear} Aura English. Todos os direitos reservados.</p>
+            <p>
+              Desenvolvido por{' '}
+              <a
+                href="https://wa.me/5551984425053"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#2563eb] underline underline-offset-2 transition-colors"
+              >
+                Lara Almeida
+              </a>
+            </p>
+          </div>
           <p>Feito para acelerar sua fluência.</p>
         </div>
       </div>
