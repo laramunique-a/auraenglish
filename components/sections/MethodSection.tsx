@@ -88,34 +88,34 @@ export default function MethodSection() {
       {/* Glow highlight */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[420px] bg-[#2563eb]/5 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto w-full space-y-3 relative">
-        {/* Compact Header */}
+      <div className="max-w-6xl mx-auto w-full space-y-6 relative">
+        {/* Header matching standard section typography */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-2xl mx-auto space-y-1"
+          className="text-center max-w-2xl mx-auto space-y-3"
         >
-          <span className="text-[11px] font-public-sans text-[#2563eb] uppercase tracking-widest font-bold">
+          <span className="text-xs font-public-sans text-[#2563eb] uppercase tracking-widest font-bold">
             Metodologia
           </span>
-          <h2 className="text-2xl sm:text-4xl font-metrophobic text-slate-900">
+          <h2 className="text-3xl sm:text-5xl font-metrophobic text-slate-900 leading-tight">
             Inglês 360°
           </h2>
         </motion.div>
 
         {/* Interactive 360° Cycle Diagram - Dedicated 3x3 Grid so arrows never overlap text/images */}
-        <div className="relative max-w-4xl mx-auto">
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-x-4 md:gap-y-1 items-center">
+        <div className="relative max-w-6xl mx-auto">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-x-8 md:gap-y-2 items-center">
             {/* CORNER 1 (Row 1, Col 1 on Desktop): Top-Left Arrow (Left -> Top) */}
             <div className="hidden md:flex md:col-start-1 md:row-start-1 items-end justify-end pr-4 pb-2 h-full">
               <HollowCurvedArrow rotation={0} isActive={activeArrow === 0} />
             </div>
 
             {/* TOP NODE (Row 1, Col 2 on Desktop): App para Memorização */}
-            <div className="md:col-start-2 md:row-start-1 flex flex-col items-center text-center max-w-[230px] mx-auto group cursor-pointer">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center mb-1 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+            <div className="md:col-start-2 md:row-start-1 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-app.png"
                   alt="App para Memorização"
@@ -126,10 +126,10 @@ export default function MethodSection() {
                 />
               </div>
 
-              <h3 className="text-sm sm:text-base font-metrophobic font-bold text-[#0f2942] leading-tight group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+              <h3 className="text-xl sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
                 App para Memorização
               </h3>
-              <p className="mt-1 text-[11px] text-slate-500 font-comfortaa leading-snug">
+              <p className="mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
                 Aplicativo de Memorização para ajudar os alunos a memorizar as palavras e frases-chave de cada aula e consolidar seu vocabulário
               </p>
             </div>
@@ -140,8 +140,8 @@ export default function MethodSection() {
             </div>
 
             {/* LEFT NODE (Row 2, Col 1 on Desktop): Aulas 100% em inglês */}
-            <div className="md:col-start-1 md:row-start-2 flex flex-col items-center text-center max-w-[230px] mx-auto group cursor-pointer">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center mb-1 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+            <div className="md:col-start-1 md:row-start-2 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-aulas.png"
                   alt="Aulas 100% em inglês"
@@ -152,23 +152,23 @@ export default function MethodSection() {
                 />
               </div>
 
-              <h3 className="text-sm sm:text-base font-metrophobic font-bold text-[#0f2942] leading-tight group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+              <h3 className="text-xl sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
                 Aulas 100% em inglês
               </h3>
-              <p className="mt-1 text-[11px] text-slate-500 font-comfortaa leading-snug">
+              <p className="mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
                 Desde a primeira aula, você terá um ambiente 100% em inglês para o seu nível, mesmo para um completo iniciante
               </p>
             </div>
 
             {/* CENTER NODE ON DESKTOP (Row 2, Col 2): Animated School Logo Orb matching HeroSection */}
-            <div className="hidden md:flex md:col-start-2 md:row-start-2 items-center justify-center py-1">
-              <div className="relative w-32 h-32 flex items-center justify-center">
+            <div className="hidden md:flex md:col-start-2 md:row-start-2 items-center justify-center py-2">
+              <div className="relative w-36 h-36 flex items-center justify-center">
                 {/* Outer Rotating Orbit Rings */}
                 <div className="absolute inset-0 rounded-full border border-slate-200 animate-[spin_30s_linear_infinite]" />
                 <div className="absolute inset-2 rounded-full border border-[#2563eb]/20 animate-[spin_20s_linear_infinite_reverse]" />
 
                 {/* Glassmorphic Central Orb Container with Floating School Logo */}
-                <div className="relative w-24 h-24 rounded-full glass-panel flex items-center justify-center p-2.5 text-center border border-slate-200 shadow-lg overflow-hidden">
+                <div className="relative w-28 h-28 rounded-full glass-panel flex items-center justify-center p-3 text-center border border-slate-200 shadow-lg overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#2563eb]/10 via-transparent to-[#ea580c]/10 animate-pulse pointer-events-none" />
 
                   <motion.div
@@ -182,7 +182,7 @@ export default function MethodSection() {
                       width={160}
                       height={160}
                       unoptimized
-                      className="w-auto h-16 max-w-full max-h-full object-contain drop-shadow-sm"
+                      className="w-auto h-20 max-w-full max-h-full object-contain drop-shadow-sm"
                     />
                   </motion.div>
                 </div>
@@ -190,8 +190,8 @@ export default function MethodSection() {
             </div>
 
             {/* RIGHT NODE (Row 2, Col 3 on Desktop): Conversation */}
-            <div className="md:col-start-3 md:row-start-2 flex flex-col items-center text-center max-w-[230px] mx-auto group cursor-pointer">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center mb-1 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+            <div className="md:col-start-3 md:row-start-2 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-conversation.png"
                   alt="Conversation"
@@ -202,10 +202,10 @@ export default function MethodSection() {
                 />
               </div>
 
-              <h3 className="text-sm sm:text-base font-metrophobic font-bold text-[#0f2942] leading-tight group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+              <h3 className="text-xl sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
                 Conversation
               </h3>
-              <p className="mt-1 text-[11px] text-slate-500 font-comfortaa leading-snug">
+              <p className="mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
                 Destrave a fluência colocando em prática a teoria e as palavras da aula anterior
               </p>
             </div>
@@ -216,8 +216,8 @@ export default function MethodSection() {
             </div>
 
             {/* BOTTOM NODE (Row 3, Col 2 on Desktop): Avaliação Personalizada */}
-            <div className="md:col-start-2 md:row-start-3 flex flex-col items-center text-center max-w-[230px] mx-auto group cursor-pointer">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center mb-1 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+            <div className="md:col-start-2 md:row-start-3 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-avaliacao.png"
                   alt="Avaliação Personalizada"
@@ -228,10 +228,10 @@ export default function MethodSection() {
                 />
               </div>
 
-              <h3 className="text-sm sm:text-base font-metrophobic font-bold text-[#0f2942] leading-tight group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+              <h3 className="text-xl sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
                 Avaliação Personalizada
               </h3>
-              <p className="mt-1 text-[11px] text-slate-500 font-comfortaa leading-snug">
+              <p className="mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
                 Cada aluno tem sua avaliação através de notas, garantindo um feedback constante e específico com um progresso consistente
               </p>
             </div>

@@ -42,7 +42,7 @@ export default function Footer() {
               <ul className="space-y-2 text-slate-600">
                 <li>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/julianoteacher/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-[#2563eb] transition-colors justify-center md:justify-start"

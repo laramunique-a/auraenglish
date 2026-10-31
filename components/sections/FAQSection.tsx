@@ -12,22 +12,22 @@ export default function FAQSection() {
     {
       question: 'Quanto tempo são as aulas?',
       answer:
-        'As aulas têm duração de 1 hora e são 100% em inglês, realizadas ao vivo pelo Zoom.',
+        'As aulas tem duração de 1 hora, sempre ao vivo, nada gravado. Contudo, há a possibilidade de aumentar a carga horária de acordo com sua necessidade.',
     },
     {
       question: 'Quanto tempo é o curso?',
       answer:
-        'Respondo essa pergunta com outra: quanto tempo uma pessoa de 120kg leva para, começando a academia hoje ficar no "shape"? Saiba que nosso cérebro é um músculo e que só depende de sua própria disciplina e dedicação para chegar no resultado que almeja. Cada um tem seu tempo, por isso as aulas são de acordo com a velocidade de aprendizado de cada aluno.',
+        'Respondemos essa pergunta com outra: quanto tempo uma pessoa de 120kg leva para, começando a academia hoje, ficar no "shape"?\nSaiba que nosso cérebro é um músculo e que só depende de sua própria disciplina e dedicação para chegar no resultado que almeja. Cada um tem seu tempo, por isso as aulas são de acordo com a velocidade de aprendizado de cada aluno.',
     },
     {
       question: 'Nunca estudei inglês antes e não sei nada, sou um aluno do zero. Consigo aprender?',
       answer:
-        'Absolutamente sim! Eu também não nasci fluente e nem meus alunos, e hoje somos fluentes com tranquilidade. Tudo depende do seu esforço e dedicação nos estudos.',
+        'Absolutamente sim! Não nascemos fluentes e hoje somos com tranquilidade. Tudo depende do seu esforço e dedicação nos estudos e de quanto, realmente, você quer tornar o sonho da fluência realidade.',
     },
     {
       question: 'Gostei! Como faço pra começar as aulas?',
       answer:
-        'Seja bem-vindo(a)! É só clicar no botão abaixo e me mandar uma mensagem no WhatsApp que eu vou te responder combinando o começo das suas aulas e te passando qualquer informação a mais que você precise saber!',
+        'É só clicar no botão abaixo que alinhamos via call o início das aulas!',
       hasWhatsappCTA: true,
     },
   ];
@@ -99,7 +99,7 @@ export default function FAQSection() {
                       className="overflow-hidden"
                     >
                       <div className="px-6 pb-6 text-sm text-slate-600 font-comfortaa leading-relaxed border-t border-slate-100 pt-4 space-y-4">
-                        <p>{faq.answer}</p>
+                        <p className="whitespace-pre-line">{faq.answer}</p>
                         {faq.hasWhatsappCTA && (
                           <div>
                             <a

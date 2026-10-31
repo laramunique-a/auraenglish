@@ -1,30 +1,31 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Video, Smartphone, Laptop, Waves, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function WhyAuraSection() {
   const pillars = [
     {
-      icon: Video,
+      iconSrc: '/why-conversacao.png',
       title: 'Conversação Online',
       description:
         'Aulas de 1 hora realizadas pelo Zoom com interação dinâmica. Foco intenso na conversação para desenvolver habilidades comunicativas de forma prática e eficaz.',
     },
     {
-      icon: Smartphone,
+      iconSrc: '/why-materiais.png',
       title: 'Materiais Didáticos',
       description:
         'Os materiais didáticos são 100% digitais e gratuitos. Além de usarmos aplicativo de memorização para gravar palavras novas e aprender mais rápido.',
     },
     {
-      icon: Laptop,
+      iconSrc: '/why-aulas.png',
       title: 'Aulas Individuais ou em Grupo',
       description:
         'Todas as aulas são personalizadas para atender às necessidades específicas de cada aluno e você pode escolher entre individuais ou em pequenos grupos de até três pessoas.',
     },
     {
-      icon: Waves,
+      iconSrc: '/why-ingles.png',
       title: '100% em Inglês',
       description:
         'Todas as aulas são 100% em inglês desde o nível básico, imersão total na língua! Sem tradutores, para um aprendizado natural e eficiente. Acredite, você dá conta e eu vou te provar na sua primeira aula.',
@@ -58,29 +59,33 @@ export default function WhyAuraSection() {
           {/* Central Vertical Line on Desktop */}
           <div className="hidden md:block absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-px bg-slate-200" />
 
-          {pillars.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col items-center text-center space-y-4 px-4 sm:px-8 group"
-              >
-                <div className="w-16 h-16 rounded-full bg-[#2563eb] text-white flex items-center justify-center shadow-md shadow-blue-500/20 transition-transform duration-300 group-hover:scale-110">
-                  <Icon className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-metrophobic text-slate-900 font-bold">
-                  {item.title}
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed max-w-md">
-                  {item.description}
-                </p>
-              </motion.div>
-            );
-          })}
+          {pillars.map((item, idx) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col items-center text-center space-y-3 px-4 sm:px-8 group cursor-pointer"
+            >
+              <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
+                <Image
+                  src={item.iconSrc}
+                  alt={item.title}
+                  width={384}
+                  height={384}
+                  unoptimized
+                  className="w-full h-full object-contain drop-shadow-sm"
+                />
+              </div>
+              <h3 className="text-xl sm:text-2xl font-metrophobic text-slate-900 font-bold group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
+                {item.title}
+              </h3>
+              <p className="text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed max-w-md">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
         {/* CTA Button leading to ClassesSection */}
