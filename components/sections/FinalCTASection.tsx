@@ -46,7 +46,7 @@ export default function FinalCTASection({ onOpenBooking }: FinalCTASectionProps)
             </button>
 
             <a
-              href="https://wa.me/"
+              href="https://wa.me/5551992832896?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20as%20aulas%20da%20Aura%20English."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto py-4 px-9 rounded-full bg-emerald-50 hover:bg-emerald-100/80 border border-emerald-200 text-[#059669] font-medium text-sm transition-all duration-200 flex items-center justify-center gap-2 group backdrop-blur-md shadow-sm"

@@ -2,58 +2,52 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle, MessageCircle } from 'lucide-react';
+
+const WHATSAPP_URL =
+  'https://wa.me/5551992832896?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20minhas%20aulas%20de%20ingl%C3%AAs%20na%20Aura%20English.';
 
 export default function FAQSection() {
   const faqs = [
     {
-      question: 'Nunca estudei inglês antes. Consigo realmente aprender?',
+      question: 'Quanto tempo são as aulas?',
       answer:
-        'Sim, com certeza. O Método Aura é estruturado para construir sua confiança passo a passo desde o primeiro dia. Você aprenderá a se expressar naturalmente, sem medo de errar a gramática.',
+        'As aulas têm duração de 1 hora e são 100% em inglês, realizadas ao vivo pelo Zoom.',
     },
     {
-      question: 'Quanto tempo leva para ficar fluente?',
+      question: 'Quanto tempo é o curso?',
       answer:
-        'A fluência é uma evolução contínua. A maioria dos alunos da Aura nota um aumento significativo na confiança e na fala dentro de 3 a 6 meses de prática ativa.',
+        'Respondo essa pergunta com outra: quanto tempo uma pessoa de 120kg leva para, começando a academia hoje ficar no "shape"? Saiba que nosso cérebro é um músculo e que só depende de sua própria disciplina e dedicação para chegar no resultado que almeja. Cada um tem seu tempo, por isso as aulas são de acordo com a velocidade de aprendizado de cada aluno.',
     },
     {
-      question: 'As aulas são online?',
+      question: 'Nunca estudei inglês antes e não sei nada, sou um aluno do zero. Consigo aprender?',
       answer:
-        'Sim. 100% das nossas aulas são ao vivo e interativas, podendo ser acessadas de qualquer lugar do mundo pelo computador ou celular.',
+        'Absolutamente sim! Eu também não nasci fluente e nem meus alunos, e hoje somos fluentes com tranquilidade. Tudo depende do seu esforço e dedicação nos estudos.',
     },
     {
-      question: 'Com que frequência devo estudar?',
+      question: 'Gostei! Como faço pra começar as aulas?',
       answer:
-        'Recomendamos de 2 a 3 sessões ao vivo por semana, combinadas com uma imersão leve diária usando nossos recursos digitais e sistemas de vocabulário.',
-    },
-    {
-      question: 'Posso alternar entre aulas individuais e em grupo?',
-      answer:
-        'Sim, você tem total flexibilidade para ajustar o formato das suas aulas conforme sua rotina, orçamento ou objetivos de carreira mudem.',
-    },
-    {
-      question: 'Vocês fornecem material didático?',
-      answer:
-        'Sim! Todos os cadernos digitais, módulos interativos de vocabulário e ferramentas de acompanhamento de progresso já estão incluídos, sem taxas ocultas.',
+        'Seja bem-vindo(a)! É só clicar no botão abaixo e me mandar uma mensagem no WhatsApp que eu vou te responder combinando o começo das suas aulas e te passando qualquer informação a mais que você precise saber!',
+      hasWhatsappCTA: true,
     },
   ];
 
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleIndex = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="faq" className="py-24 px-6 sm:px-8 relative z-10">
-      <div className="max-w-4xl mx-auto space-y-16">
+    <section id="faq" className="scroll-mt-20 py-12 sm:py-16 px-6 sm:px-8 relative z-10">
+      <div className="max-w-4xl mx-auto w-full space-y-12">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center space-y-4"
+          className="text-center space-y-3"
         >
           <div className="inline-flex items-center gap-2 text-xs font-public-sans text-[#2563eb] uppercase tracking-widest font-bold">
             <HelpCircle className="w-3.5 h-3.5" />
@@ -89,7 +83,7 @@ export default function FAQSection() {
                   <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.25, ease: 'easeInOut' }}
-                    className="p-1.5 rounded-lg bg-slate-100 text-slate-600"
+                    className="p-1.5 rounded-lg bg-slate-100 text-slate-600 flex-shrink-0"
                   >
                     <ChevronDown className="w-5 h-5" />
                   </motion.div>
@@ -104,8 +98,21 @@ export default function FAQSection() {
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 text-sm text-slate-600 font-comfortaa leading-relaxed border-t border-slate-100 pt-4">
-                        {faq.answer}
+                      <div className="px-6 pb-6 text-sm text-slate-600 font-comfortaa leading-relaxed border-t border-slate-100 pt-4 space-y-4">
+                        <p>{faq.answer}</p>
+                        {faq.hasWhatsappCTA && (
+                          <div>
+                            <a
+                              href={WHATSAPP_URL}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-gradient-to-r from-[#059669] to-[#10b981] hover:from-[#047857] hover:to-[#059669] text-white font-medium text-xs sm:text-sm transition-all duration-200 shadow-md shadow-emerald-600/20"
+                            >
+                              <MessageCircle className="w-4 h-4" />
+                              <span>Chamar no WhatsApp</span>
+                            </a>
+                          </div>
+                        )}
                       </div>
                     </motion.div>
                   )}

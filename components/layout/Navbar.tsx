@@ -26,7 +26,7 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
   }, []);
 
   const navLinks = [
-    { name: 'Sobre', href: '#about' },
+    { name: 'AuraUP', href: '#about' },
     { name: 'Método', href: '#method' },
     { name: 'Aulas', href: '#classes' },
     { name: 'FAQ', href: '#faq' },

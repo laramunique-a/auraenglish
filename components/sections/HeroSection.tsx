@@ -2,11 +2,11 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, Compass, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Compass } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 sm:px-8 overflow-hidden bg-[#f8fafc]">
+    <section className="relative flex items-center justify-center pt-28 pb-12 sm:pt-36 sm:pb-16 px-6 sm:px-8 overflow-hidden bg-[#f8fafc]">
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
         {/* Hero Content (Left 7 Cols) */}
         <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
@@ -53,21 +53,6 @@ export default function HeroSection() {
               <Compass className="w-4 h-4 text-[#2563eb] group-hover:rotate-45 transition-transform" />
               <span>Conheça o Método Aura</span>
             </a>
-          </motion.div>
-
-          {/* Trust Metrics Pill */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="pt-6 flex items-center justify-center lg:justify-start gap-6 text-xs text-slate-500 font-public-sans"
-          >
-            <div className="flex items-center gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#059669]" />
-              <span>100% Prático & Foco em Conversação</span>
-            </div>
-            <span className="w-1.5 h-1.5 rounded-full bg-slate-300" />
-            <span>Acessível e Personalizado</span>
           </motion.div>
         </div>
 

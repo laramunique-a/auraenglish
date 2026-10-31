@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative z-10 border-t border-slate-200 bg-white/80 backdrop-blur-xl pt-16 pb-12 px-6 sm:px-8">
+    <footer id="contact" className="relative z-10 border-t border-slate-200 bg-white/80 backdrop-blur-xl pt-16 pb-12 px-6 sm:px-8">
       <div className="max-w-7xl mx-auto space-y-12">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 text-center md:text-left">
           {/* Logo & Tagline */}
@@ -37,18 +37,6 @@ export default function Footer() {
           <div className="flex flex-wrap justify-center md:justify-end gap-10 text-sm font-comfortaa">
             <div className="space-y-3">
               <h4 className="text-xs font-public-sans uppercase tracking-widest text-slate-900 font-semibold">
-                Navegação
-              </h4>
-              <ul className="space-y-2 text-slate-600">
-                <li><a href="#about" className="hover:text-slate-900 transition-colors">Sobre</a></li>
-                <li><a href="#method" className="hover:text-slate-900 transition-colors">Método</a></li>
-                <li><a href="#classes" className="hover:text-slate-900 transition-colors">Aulas</a></li>
-                <li><a href="#faq" className="hover:text-slate-900 transition-colors">Perguntas Frequentes</a></li>
-              </ul>
-            </div>
-
-            <div className="space-y-3">
-              <h4 className="text-xs font-public-sans uppercase tracking-widest text-slate-900 font-semibold">
                 Contato
               </h4>
               <ul className="space-y-2 text-slate-600">
@@ -69,22 +57,22 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://wa.me"
+                    href="https://wa.me/5551992832896"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 hover:text-[#059669] transition-colors justify-center md:justify-start"
                   >
                     <MessageCircle className="w-4 h-4 text-[#059669]" />
-                    <span>WhatsApp</span>
+                    <span>(51) 99283-2896</span>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="mailto:contact@auraenglish.com"
+                    href="mailto:auraenglish7@gmail.com"
                     className="flex items-center gap-2 hover:text-[#ea580c] transition-colors justify-center md:justify-start"
                   >
                     <Mail className="w-4 h-4 text-[#ea580c]" />
-                    <span>contact@auraenglish.com</span>
+                    <span>auraenglish7@gmail.com</span>
                   </a>
                 </li>
               </ul>
