@@ -58,7 +58,7 @@ export default function ClassesSection({ onOpenBooking }: ClassesSectionProps) {
               </div>
 
               <p className="text-sm text-slate-600 font-comfortaa leading-relaxed">
-                Currículo 100% personalizado e desenvolvido de acordo com seus objetivos profissionais.
+                Currículo 100% personalizado e desenvolvido de acordo com seus objetivos.
               </p>
 
               <ul className="space-y-3 pt-1 sm:pt-2">

@@ -16,13 +16,13 @@ export default function WhyAuraSection() {
       iconSrc: '/why-materiais.png',
       title: 'Materiais Didáticos',
       description:
-        'Os materiais didáticos são 100% digitais e gratuitos. Além de usarmos aplicativo de memorização para gravar palavras novas e aprender mais rápido.',
+        'Os materiais didáticos são 100% digitais. Além de usarmos nosso aplicativo de memorização para gravar palavras novas e aprender mais rápido.',
     },
     {
       iconSrc: '/why-aulas.png',
       title: 'Aulas Individuais ou em Grupo',
       description:
-        'Todas as aulas são personalizadas para atender às necessidades específicas de cada aluno e você pode escolher entre individuais ou em pequenos grupos de até três pessoas.',
+        'Todas as aulas são personalizadas para atender às necessidades específicas de cada aluno e você pode escolher entre individuais ou em pequenos grupos de até quatro pessoas.',
     },
     {
       iconSrc: '/why-ingles.png',

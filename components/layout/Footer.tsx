@@ -26,7 +26,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-xs font-metrophobic text-[#2563eb] tracking-widest uppercase font-semibold">
-              Expanda seus horizontes.
+              Expand Yourself
             </p>
             <p className="text-xs text-slate-500 font-comfortaa leading-relaxed">
               Uma plataforma moderna de inglês feita para destravar sua confiança, comunicação global e transformação pessoal.

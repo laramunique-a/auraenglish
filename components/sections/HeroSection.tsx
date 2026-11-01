@@ -68,6 +68,51 @@ export default function HeroSection() {
             <div className="absolute inset-0 rounded-full border border-slate-200 animate-[spin_30s_linear_infinite]" />
             <div className="absolute inset-4 rounded-full border border-[#2563eb]/20 animate-[spin_20s_linear_infinite_reverse]" />
 
+            {/* Curved "EXPAND YOURSELF" Slogan & Tapered Orange Arcs below the Outer Ring */}
+            <svg
+              viewBox="0 0 420 420"
+              className="absolute inset-0 w-full h-full overflow-visible pointer-events-none select-none"
+              aria-hidden="true"
+            >
+              <defs>
+                {/* Counter-clockwise bottom arc (r=236) so curved text reads upright left-to-right */}
+                <path
+                  id="hero-expand-yourself-arc"
+                  d="M 5.62 328 A 236 236 0 0 0 414.38 328"
+                  fill="none"
+                />
+              </defs>
+
+              {/* Left Tapered Orange Arc (163° -> 140°) */}
+              <path
+                d="M -8.04 276.67 A 229.8 229.8 0 0 0 33.97 357.72 A 1.8 1.8 0 0 0 36.73 355.40 A 226.2 226.2 0 0 1 -8.04 276.67 Z"
+                fill="#ff6b00"
+              />
+
+              {/* Right Tapered Orange Arc (17° -> 40°) */}
+              <path
+                d="M 428.04 276.67 A 229.8 229.8 0 0 1 386.03 357.72 A 1.8 1.8 0 0 1 383.27 355.40 A 226.2 226.2 0 0 0 428.04 276.67 Z"
+                fill="#ff6b00"
+              />
+
+              {/* Curved Slogan Text */}
+              <text
+                fill="#ff6b00"
+                fontSize="21.5"
+                fontWeight="700"
+                letterSpacing="0.21em"
+                className="font-public-sans uppercase"
+              >
+                <textPath
+                  href="#hero-expand-yourself-arc"
+                  startOffset="50%"
+                  textAnchor="middle"
+                >
+                  EXPAND YOURSELF
+                </textPath>
+              </text>
+            </svg>
+
             {/* Glassmorphic Central Orb Container - Only Logo */}
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full glass-panel flex items-center justify-center p-6 text-center border border-slate-200 shadow-xl overflow-hidden">
               {/* Subtle Animated Background Radial Glow */}

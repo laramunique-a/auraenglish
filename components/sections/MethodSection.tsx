@@ -114,12 +114,12 @@ export default function MethodSection() {
               <HollowCurvedArrow rotation={0} isActive={activeArrow === 0} />
             </div>
 
-            {/* TOP NODE (Row 1, Col 2 on Desktop): App para Memorização */}
+            {/* TOP NODE (Row 1, Col 2 on Desktop): AuraUP */}
             <div className="order-1 md:order-none md:col-start-2 md:row-start-1 flex flex-col items-center text-center max-w-sm mx-auto group cursor-pointer">
               <div className="w-28 h-28 sm:w-40 sm:h-40 flex items-center justify-center mb-2.5 sm:mb-3 transition-transform duration-300 ease-out group-hover:-translate-y-1.5">
                 <Image
                   src="/method-app.png"
-                  alt="App para Memorização"
+                  alt="AuraUP"
                   width={560}
                   height={560}
                   unoptimized
@@ -128,10 +128,10 @@ export default function MethodSection() {
               </div>
 
               <h3 className="text-lg sm:text-2xl font-metrophobic font-bold text-slate-900 leading-snug group-hover:text-[#2563eb] transition-colors duration-300 ease-out">
-                App para Memorização
+                AuraUP
               </h3>
               <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
-                Aplicativo de Memorização para ajudar os alunos a memorizar as palavras e frases-chave de cada aula e consolidar seu vocabulário
+                Nosso aplicativo de memorização para ajudar os alunos a gravar as palavras e frases chave de cada aula e consolidar seu vocabulário.
               </p>
 
               {/* Mobile Flow Connector */}
@@ -167,11 +167,55 @@ export default function MethodSection() {
             </div>
 
             {/* CENTER NODE ON DESKTOP (Row 2, Col 2): Animated School Logo Orb matching HeroSection */}
-            <div className="hidden md:flex md:col-start-2 md:row-start-2 items-center justify-center py-2">
+            <div className="hidden md:flex md:col-start-2 md:row-start-2 items-center justify-center py-4">
               <div className="relative w-36 h-36 flex items-center justify-center">
                 {/* Outer Rotating Orbit Rings */}
                 <div className="absolute inset-0 rounded-full border border-slate-200 animate-[spin_30s_linear_infinite]" />
                 <div className="absolute inset-2 rounded-full border border-[#2563eb]/20 animate-[spin_20s_linear_infinite_reverse]" />
+
+                {/* Curved "EXPAND YOURSELF" Slogan & Tapered Orange Arcs below the Outer Ring */}
+                <svg
+                  viewBox="0 0 420 420"
+                  className="absolute inset-0 w-full h-full overflow-visible pointer-events-none select-none"
+                  aria-hidden="true"
+                >
+                  <defs>
+                    <path
+                      id="method-expand-yourself-arc"
+                      d="M 5.62 328 A 236 236 0 0 0 414.38 328"
+                      fill="none"
+                    />
+                  </defs>
+
+                  {/* Left Tapered Orange Arc (163° -> 140°) */}
+                  <path
+                    d="M -8.04 276.67 A 229.8 229.8 0 0 0 33.97 357.72 A 1.8 1.8 0 0 0 36.73 355.40 A 226.2 226.2 0 0 1 -8.04 276.67 Z"
+                    fill="#ff6b00"
+                  />
+
+                  {/* Right Tapered Orange Arc (17° -> 40°) */}
+                  <path
+                    d="M 428.04 276.67 A 229.8 229.8 0 0 1 386.03 357.72 A 1.8 1.8 0 0 1 383.27 355.40 A 226.2 226.2 0 0 0 428.04 276.67 Z"
+                    fill="#ff6b00"
+                  />
+
+                  {/* Curved Slogan Text */}
+                  <text
+                    fill="#ff6b00"
+                    fontSize="21.5"
+                    fontWeight="700"
+                    letterSpacing="0.21em"
+                    className="font-public-sans uppercase"
+                  >
+                    <textPath
+                      href="#method-expand-yourself-arc"
+                      startOffset="50%"
+                      textAnchor="middle"
+                    >
+                      EXPAND YOURSELF
+                    </textPath>
+                  </text>
+                </svg>
 
                 {/* Glassmorphic Central Orb Container with Floating School Logo */}
                 <div className="relative w-28 h-28 rounded-full glass-panel flex items-center justify-center p-3 text-center border border-slate-200 shadow-lg overflow-hidden">
