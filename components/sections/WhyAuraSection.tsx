@@ -16,13 +16,13 @@ export default function WhyAuraSection() {
       iconSrc: '/why-materiais.png',
       title: 'Materiais Didáticos',
       description:
-        'Os materiais didáticos são 100% digitais. Além de usarmos nosso aplicativo de memorização para gravar palavras novas e aprender mais rápido.',
+        'Os materiais didáticos são 100% digitais. Além de usarmos nosso aplicativo de memorização para você gravar palavras novas e aprender muito mais rápido.',
     },
     {
       iconSrc: '/why-aulas.png',
       title: 'Aulas Individuais ou em Grupo',
       description:
-        'Todas as aulas são personalizadas para atender às necessidades específicas de cada aluno e você pode escolher entre individuais ou em pequenos grupos de até quatro pessoas.',
+        'Todas as aulas são personalizadas para atender às suas necessidades específicas e você pode escolher entre individuais ou em pequenos grupos de até quatro pessoas.',
     },
     {
       iconSrc: '/why-ingles.png',
@@ -47,10 +47,10 @@ export default function WhyAuraSection() {
             Por que a Aura
           </span>
           <h2 className="text-2xl sm:text-5xl font-metrophobic text-slate-900">
-            Por que os alunos escolhem a Aura
+            Por que você escolhe a Aura?
           </h2>
           <p className="text-sm sm:text-base text-slate-600 font-comfortaa">
-            Desenhado para quem vê o inglês como um investimento na sua transformação pessoal.
+            Desenhado para você que vê o inglês como um investimento na sua transformação pessoal.
           </p>
         </motion.div>
 

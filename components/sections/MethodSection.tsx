@@ -131,7 +131,7 @@ export default function MethodSection() {
                 AuraUP
               </h3>
               <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
-                Nosso aplicativo de memorização para ajudar os alunos a gravar as palavras e frases chave de cada aula e consolidar seu vocabulário.
+                Nosso aplicativo de memorização que ajuda você a gravar as palavras, expressões de cada aula e consolidar seu vocabulário.
               </p>
 
               {/* Mobile Flow Connector */}
@@ -168,7 +168,7 @@ export default function MethodSection() {
 
             {/* CENTER NODE ON DESKTOP (Row 2, Col 2): Animated School Logo Orb matching HeroSection */}
             <div className="hidden md:flex md:col-start-2 md:row-start-2 items-center justify-center py-4">
-              <div className="relative w-36 h-36 flex items-center justify-center">
+              <div className="relative w-44 h-44 lg:w-48 lg:h-48 flex items-center justify-center">
                 {/* Outer Rotating Orbit Rings */}
                 <div className="absolute inset-0 rounded-full border border-slate-200 animate-[spin_30s_linear_infinite]" />
                 <div className="absolute inset-2 rounded-full border border-[#2563eb]/20 animate-[spin_20s_linear_infinite_reverse]" />
@@ -218,7 +218,7 @@ export default function MethodSection() {
                 </svg>
 
                 {/* Glassmorphic Central Orb Container with Floating School Logo */}
-                <div className="relative w-28 h-28 rounded-full glass-panel flex items-center justify-center p-3 text-center border border-slate-200 shadow-lg overflow-hidden">
+                <div className="relative w-36 h-36 lg:w-40 lg:h-40 rounded-full glass-panel flex items-center justify-center p-4 text-center border border-slate-200 shadow-lg overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-[#2563eb]/10 via-transparent to-[#ea580c]/10 animate-pulse pointer-events-none" />
 
                   <motion.div
@@ -229,10 +229,10 @@ export default function MethodSection() {
                     <Image
                       src="/logo-aura.png"
                       alt="Aura English Logo"
-                      width={160}
-                      height={160}
+                      width={220}
+                      height={220}
                       unoptimized
-                      className="w-auto h-20 max-w-full max-h-full object-contain drop-shadow-sm"
+                      className="w-auto h-28 lg:h-32 max-w-full max-h-full object-contain drop-shadow-sm"
                     />
                   </motion.div>
                 </div>
@@ -287,7 +287,7 @@ export default function MethodSection() {
                 Avaliação Personalizada
               </h3>
               <p className="mt-1.5 sm:mt-2 text-sm sm:text-base text-slate-600 font-comfortaa leading-relaxed">
-                Cada aluno tem sua avaliação através de notas, garantindo um feedback constante e específico com um progresso consistente
+                Você tem avaliação através de boletim, garantindo feedback constante e específico com progresso consistente
               </p>
 
               {/* Mobile Flow Connector */}

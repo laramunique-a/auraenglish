@@ -76,7 +76,7 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => toggleIndex(idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-metrophobic text-base sm:text-lg text-slate-900 font-semibold hover:text-[#2563eb] transition-colors focus:outline-none"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-metrophobic text-lg sm:text-xl text-slate-900 font-bold hover:text-[#2563eb] transition-colors focus:outline-none"
                   aria-expanded={isOpen}
                 >
                   <span>{faq.question}</span>
@@ -98,7 +98,7 @@ export default function FAQSection() {
                       transition={{ duration: 0.25, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 font-comfortaa leading-relaxed border-t border-slate-100 pt-4 space-y-4">
+                      <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-base sm:text-lg text-slate-700 font-comfortaa leading-relaxed border-t border-slate-100 pt-4 space-y-4">
                         <p className="whitespace-pre-line">{faq.answer}</p>
                         {faq.hasWhatsappCTA && (
                           <div>
@@ -106,7 +106,7 @@ export default function FAQSection() {
                               href={WHATSAPP_URL}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-gradient-to-r from-[#059669] to-[#10b981] hover:from-[#047857] hover:to-[#059669] text-white font-medium text-xs sm:text-sm transition-all duration-200 shadow-md shadow-emerald-600/20"
+                              className="inline-flex items-center gap-2 py-3 px-6 rounded-full bg-gradient-to-r from-[#059669] to-[#10b981] hover:from-[#047857] hover:to-[#059669] text-white font-medium text-sm sm:text-base transition-all duration-200 shadow-md shadow-emerald-600/20"
                             >
                               <MessageCircle className="w-4 h-4" />
                               <span>Chamar no WhatsApp</span>

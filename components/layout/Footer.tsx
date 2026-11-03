@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto space-y-5">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-6 text-center md:text-left">
           {/* Logo & Tagline */}
-          <div className="space-y-2 max-w-sm">
+          <div className="space-y-3 max-w-sm">
             <a href="#" className="relative flex items-center gap-3 group justify-center md:justify-start">
               <Image
                 src="/logo-aura-icon.png"
@@ -19,15 +19,17 @@ export default function Footer() {
                 width={64}
                 height={64}
                 unoptimized
-                className="h-10 w-auto object-contain"
+                className="h-11 w-auto object-contain"
               />
-              <span className="text-xl font-comfortaa font-bold text-slate-900 leading-tight">
-                Aura <span className="text-[#2563eb]">English</span>
-              </span>
+              <div className="flex flex-col text-left">
+                <span className="text-xl font-comfortaa font-bold text-slate-900 leading-tight">
+                  Aura <span className="text-[#2563eb]">English</span>
+                </span>
+                <span className="text-[10px] font-public-sans tracking-[0.18em] text-[#2563eb] uppercase font-bold leading-tight mt-0.5">
+                  Expand Yourself
+                </span>
+              </div>
             </a>
-            <p className="text-xs font-metrophobic text-[#2563eb] tracking-widest uppercase font-semibold">
-              Expand Yourself
-            </p>
             <p className="text-xs text-slate-500 font-comfortaa leading-relaxed">
               Uma plataforma moderna de inglês feita para destravar sua confiança, comunicação global e transformação pessoal.
             </p>
