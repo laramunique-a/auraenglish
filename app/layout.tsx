@@ -19,37 +19,46 @@ const publicSans = Public_Sans({
   variable: '--font-public-sans',
 });
 
+const SITE_URL = 'https://www.auraenglish.com.br';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://auraenglish.com'),
-  title: 'Aura English',
+  metadataBase: new URL(SITE_URL),
+  title: 'Aura English | Escola de Inglês - Aulas Particular e em Grupo',
   description:
-    'A Aura English é uma plataforma moderna e premium de inglês focada em confiança, oportunidades e crescimento pessoal. Expanda seu mundo através do inglês.',
+    'Aprenda inglês com aulas ao vivo 100% personalizadas, foco em conversação e aplicativo de memorização AuraUP. Destrave sua fluência do zero ao avançado.',
   keywords: [
-    'Curso de Inglês',
     'Aura English',
+    'Aulas de Inglês Online',
+    'Curso de Inglês Online',
     'Aulas Particulares de Inglês',
+    'Aulas de Inglês em Grupo',
+    'Inglês para Conversação',
+    'AuraUP',
+    'Teacher Juliano',
+    'Aprender Inglês Rápido',
     'Inglês para Negócios',
-    'Fluência em Inglês',
-    'Educação Premium',
   ],
   authors: [{ name: 'Aura English' }],
+  alternates: {
+    canonical: SITE_URL,
+  },
   icons: {
     icon: '/logo-aura-icon.png',
     shortcut: '/logo-aura-icon.png',
     apple: '/logo-aura-icon.png',
   },
   openGraph: {
-    title: 'Aura English',
+    title: 'Aura English | Expand Yourself',
     description:
-      'Aprender inglês não é sobre memorizar regras gramaticais. É sobre construir confiança, criar oportunidades e se tornar a pessoa que você deseja ser.',
-    url: 'https://auraenglish.com',
+      'Aprenda inglês com aulas ao vivo 100% personalizadas, foco em conversação e aplicativo de memorização AuraUP.',
+    url: SITE_URL,
     siteName: 'Aura English',
     images: [
       {
-        url: '/logo-aura.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Aura English Logo',
+        alt: 'Aura English - Expand Yourself',
       },
     ],
     locale: 'pt_BR',
@@ -57,27 +66,100 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aura English',
+    title: 'Aura English | Expand Yourself',
     description:
-      'Expanda seu mundo através do inglês. Aprendizado de inglês personalizado e premium.',
-    images: ['/logo-aura.png'],
+      'Aprenda inglês com aulas ao vivo 100% personalizadas, foco em conversação e aplicativo de memorização AuraUP.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'EducationalOrganization',
-  name: 'Aura English',
-  url: 'https://auraenglish.com',
-  logo: 'https://auraenglish.com/logo-aura.png',
-  description:
-    'Uma forma moderna de aprender inglês focada em confiança, comunicação global e crescimento pessoal.',
-  slogan: 'Expanda Seus Horizontes',
-  sameAs: ['https://instagram.com', 'https://wa.me'],
+  '@graph': [
+    {
+      '@type': 'EducationalOrganization',
+      '@id': `${SITE_URL}/#organization`,
+      name: 'Aura English',
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo-aura.png`,
+      image: `${SITE_URL}/og-image.png`,
+      description:
+        'Aprenda inglês com aulas ao vivo 100% personalizadas, foco em conversação e aplicativo de memorização AuraUP.',
+      slogan: 'Expand Yourself',
+      telephone: '+5551992832896',
+      email: 'auraenglish7@gmail.com',
+      sameAs: [
+        'https://www.instagram.com/julianoteacher/',
+        'https://wa.me/5551992832896',
+      ],
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5.0',
+        bestRating: '5',
+        worstRating: '1',
+        ratingCount: '15',
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: 'Aura English',
+      publisher: {
+        '@id': `${SITE_URL}/#organization`,
+      },
+      inLanguage: 'pt-BR',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${SITE_URL}/#faq`,
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Quanto tempo são as aulas?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'As aulas tem duração de 1 hora, sempre ao vivo, nada gravado. Contudo, há a possibilidade de aumentar a carga horária de acordo com sua necessidade.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quanto tempo é o curso?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Respondemos essa pergunta com outra: quanto tempo uma pessoa de 120kg leva para, começando a academia hoje, ficar no "shape"? Saiba que nosso cérebro é um músculo e que só depende de sua própria disciplina e dedicação para chegar no resultado que almeja. Cada um tem seu tempo, por isso as aulas são de acordo com a velocidade de aprendizado de cada aluno.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Nunca estudei inglês antes e não sei nada, sou um aluno do zero. Consigo aprender?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Absolutamente sim! Não nascemos fluentes e hoje somos com tranquilidade. Tudo depende do seu esforço e dedicação nos estudos e de quanto, realmente, você quer tornar o sonho da fluência realidade.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Gostei! Como faço pra começar as aulas?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'É só clicar no botão abaixo que alinhamos via call o início das aulas!',
+          },
+        },
+      ],
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -107,4 +189,3 @@ export default function RootLayout({
     </html>
   );
 }
-
