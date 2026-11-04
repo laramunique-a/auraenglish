@@ -72,13 +72,7 @@ export default function AboutSection() {
           </motion.div>
 
           {/* Text Content (Right 6 Cols on Desktop, First on Mobile) */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="order-1 lg:order-2 lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left"
-          >
+          <div className="order-1 lg:order-2 lg:col-span-6 space-y-4 sm:space-y-6 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 text-xs font-public-sans text-[#2563eb] uppercase tracking-widest font-bold">
               <Sparkles className="w-3.5 h-3.5" />
               Conheça o AuraUP
@@ -113,7 +107,7 @@ export default function AboutSection() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
