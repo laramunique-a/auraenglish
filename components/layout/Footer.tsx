@@ -37,9 +37,9 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="flex flex-wrap justify-center md:justify-end gap-8 text-sm font-comfortaa">
             <div className="space-y-2">
-              <h4 className="text-xs font-public-sans uppercase tracking-widest text-slate-900 font-semibold">
+              <h3 className="text-xs font-public-sans uppercase tracking-widest text-slate-900 font-semibold">
                 Contato
-              </h4>
+              </h3>
               <ul className="space-y-1.5 text-slate-600">
                 <li>
                   <a

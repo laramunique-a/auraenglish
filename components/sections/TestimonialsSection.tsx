@@ -207,7 +207,7 @@ export default function TestimonialsSection() {
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-xs font-public-sans text-slate-400">• Google Reviews</span>
+                  <span className="text-xs font-public-sans text-slate-500">• Google Reviews</span>
                 </div>
 
                 <p className="text-sm sm:text-base text-slate-700 font-comfortaa leading-relaxed whitespace-pre-line">
@@ -226,9 +226,9 @@ export default function TestimonialsSection() {
                       />
                     </div>
                     <div>
-                      <h4 className="text-sm sm:text-base font-metrophobic text-slate-900 font-bold">
+                      <p className="text-sm sm:text-base font-metrophobic text-slate-900 font-bold">
                         {testimonials[currentIndex].name}
-                      </h4>
+                      </p>
                       <p className="text-xs text-slate-500 font-public-sans">
                         {testimonials[currentIndex].location}
                       </p>
@@ -251,32 +251,36 @@ export default function TestimonialsSection() {
 
           {/* Discreet Carousel Controls */}
           <div className="flex items-center justify-between pt-4 px-2">
-            <div className="flex items-center gap-1.5 flex-wrap">
+            <div className="flex items-center gap-1 flex-wrap">
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    idx === currentIndex
-                      ? 'w-5 bg-[#2563eb]/80'
-                      : 'w-1.5 bg-slate-300/80 hover:bg-slate-400'
-                  }`}
+                  className="p-2 flex items-center justify-center cursor-pointer"
                   aria-label={`Ir para depoimento ${idx + 1}`}
-                />
+                >
+                  <span
+                    className={`h-1.5 rounded-full transition-all duration-300 block ${
+                      idx === currentIndex
+                        ? 'w-5 bg-[#2563eb]/80'
+                        : 'w-1.5 bg-slate-300/80 hover:bg-slate-400'
+                    }`}
+                  />
+                </button>
               ))}
             </div>
 
             <div className="flex items-center gap-1">
               <button
                 onClick={handlePrev}
-                className="p-1.5 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-200/50 transition-all"
+                className="p-2 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-200/50 transition-all cursor-pointer"
                 aria-label="Depoimento anterior"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={handleNext}
-                className="p-1.5 rounded-full text-slate-400 hover:text-slate-700 hover:bg-slate-200/50 transition-all"
+                className="p-2 rounded-full text-slate-500 hover:text-slate-700 hover:bg-slate-200/50 transition-all cursor-pointer"
                 aria-label="Próximo depoimento"
               >
                 <ChevronRight className="w-4 h-4" />

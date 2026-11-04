@@ -16,7 +16,7 @@ export default function AboutSection() {
           observer.disconnect();
         }
       },
-      { rootMargin: '300px' }
+      { threshold: 0.2 }
     );
 
     if (containerRef.current) {
@@ -46,7 +46,7 @@ export default function AboutSection() {
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-400" />
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400" />
                 </div>
-                <span className="text-[10px] sm:text-[11px] font-public-sans text-slate-400 tracking-wider uppercase font-mono">
+                <span className="text-[10px] sm:text-[11px] font-public-sans text-slate-500 tracking-wider uppercase font-mono">
                   auraup.auraenglish.com.br
                 </span>
               </div>
@@ -98,7 +98,7 @@ export default function AboutSection() {
                   <Gamepad2 className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-metrophobic text-slate-900 font-semibold">Aprendizado Gamificado</h4>
+                  <h3 className="text-sm font-metrophobic text-slate-900 font-semibold">Aprendizado Gamificado</h3>
                   <p className="text-xs text-slate-500">Ganhe XP e aprenda se divertindo</p>
                 </div>
               </div>
@@ -108,7 +108,7 @@ export default function AboutSection() {
                   <Trophy className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-metrophobic text-slate-900 font-semibold">Ranking e Evolução</h4>
+                  <h3 className="text-sm font-metrophobic text-slate-900 font-semibold">Ranking e Evolução</h3>
                   <p className="text-xs text-slate-500">Suba de nível a cada nova aula</p>
                 </div>
               </div>

@@ -10,25 +10,15 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center relative z-10">
         {/* Hero Content (Left 7 Cols) */}
         <div className="lg:col-span-7 space-y-6 sm:space-y-8 text-center lg:text-left">
-          {/* Main Headline with Blur + Fade Up */}
-          <motion.h1
-            initial={{ opacity: 0, filter: 'blur(10px)', y: 20 }}
-            animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-3xl sm:text-6xl lg:text-7xl font-metrophobic tracking-tight text-slate-900 leading-[1.15] sm:leading-[1.1]"
-          >
+          {/* Main Headline */}
+          <h1 className="text-3xl sm:text-6xl lg:text-7xl font-metrophobic tracking-tight text-slate-900 leading-[1.15] sm:leading-[1.1]">
             Expanda seu mundo através do <span className="bg-gradient-to-r from-[#2563eb] via-[#3b82f6] to-[#fc9103] bg-clip-text text-transparent">Inglês</span>.
-          </motion.h1>
+          </h1>
 
           {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-sm sm:text-lg text-slate-600 font-comfortaa max-w-2xl mx-auto lg:mx-0 leading-relaxed"
-          >
+          <p className="text-sm sm:text-lg text-slate-600 font-comfortaa max-w-2xl mx-auto lg:mx-0 leading-relaxed">
             Aprender inglês não é sobre memorizar regras gramaticais. É sobre construir confiança, criar oportunidades e se tornar a pessoa que você deseja ser.
-          </motion.p>
+          </p>
 
           {/* Action CTAs */}
           <motion.div
