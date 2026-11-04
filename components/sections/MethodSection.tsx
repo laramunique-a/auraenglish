@@ -122,7 +122,7 @@ export default function MethodSection() {
                   alt="AuraUP"
                   width={560}
                   height={560}
-                  unoptimized
+                  sizes="(max-width: 640px) 112px, 160px"
                   className="w-full h-full object-contain drop-shadow-sm"
                 />
               </div>
@@ -153,7 +153,7 @@ export default function MethodSection() {
                   alt="Aulas 100% em inglês"
                   width={560}
                   height={560}
-                  unoptimized
+                  sizes="(max-width: 640px) 112px, 160px"
                   className="w-full h-full object-contain drop-shadow-sm"
                 />
               </div>
@@ -231,7 +231,7 @@ export default function MethodSection() {
                       alt="Aura English Logo"
                       width={220}
                       height={220}
-                      unoptimized
+                      sizes="(max-width: 1024px) 144px, 160px"
                       className="w-auto h-28 lg:h-32 max-w-full max-h-full object-contain drop-shadow-sm"
                     />
                   </motion.div>
@@ -247,7 +247,7 @@ export default function MethodSection() {
                   alt="Conversation"
                   width={560}
                   height={560}
-                  unoptimized
+                  sizes="(max-width: 640px) 112px, 160px"
                   className="w-full h-full object-contain drop-shadow-sm"
                 />
               </div>
@@ -278,7 +278,7 @@ export default function MethodSection() {
                   alt="Avaliação Personalizada"
                   width={560}
                   height={560}
-                  unoptimized
+                  sizes="(max-width: 640px) 112px, 160px"
                   className="w-full h-full object-contain drop-shadow-sm"
                 />
               </div>

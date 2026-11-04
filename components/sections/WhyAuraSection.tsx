@@ -74,7 +74,7 @@ export default function WhyAuraSection() {
                   alt={item.title}
                   width={384}
                   height={384}
-                  unoptimized
+                  sizes="(max-width: 640px) 96px, 112px"
                   className="w-full h-full object-contain drop-shadow-sm"
                 />
               </div>

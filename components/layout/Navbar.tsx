@@ -51,7 +51,6 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
               width={64}
               height={64}
               priority
-              unoptimized
               className="h-11 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <div className="flex flex-col">

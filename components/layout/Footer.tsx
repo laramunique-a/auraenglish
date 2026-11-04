@@ -18,7 +18,6 @@ export default function Footer() {
                 alt="Aura English Emblem"
                 width={64}
                 height={64}
-                unoptimized
                 className="h-11 w-auto object-contain"
               />
               <div className="flex flex-col text-left">

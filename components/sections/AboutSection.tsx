@@ -1,9 +1,31 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Trophy, Gamepad2 } from 'lucide-react';
 
 export default function AboutSection() {
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVideoVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '300px' }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="about" className="scroll-mt-20 py-10 sm:py-16 px-5 sm:px-8 relative z-10">
       <div className="max-w-7xl mx-auto w-full">
@@ -30,15 +52,21 @@ export default function AboutSection() {
               </div>
 
               {/* AuraUP Screen Recording Video */}
-              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/60 bg-slate-50">
-                <video
-                  src="/auraup-demo.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto block object-cover"
-                />
+              <div
+                ref={containerRef}
+                className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-slate-200/60 bg-slate-50 aspect-[1920/1392]"
+              >
+                {isVideoVisible && (
+                  <video
+                    src="/auraup-demo.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-full block object-cover"
+                  />
+                )}
               </div>
             </div>
           </motion.div>

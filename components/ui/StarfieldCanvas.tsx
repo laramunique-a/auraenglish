@@ -11,7 +11,7 @@ export default function StarfieldCanvas() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let animationFrameId: number;
+    let animationFrameId = 0;
     let width = (canvas.width = window.innerWidth);
     let height = (canvas.height = window.innerHeight);
 
@@ -21,9 +21,11 @@ export default function StarfieldCanvas() {
       height = canvas.height = window.innerHeight;
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize, { passive: true });
 
-    const starCount = Math.floor((width * height) / 10000);
+    const isMobile = width < 768;
+    const divisor = isMobile ? 18000 : 10000;
+    const starCount = Math.floor((width * height) / divisor);
     const stars: Array<{
       x: number;
       y: number;
@@ -45,10 +47,16 @@ export default function StarfieldCanvas() {
     }
 
     const render = () => {
+      if (document.hidden) {
+        animationFrameId = requestAnimationFrame(render);
+        return;
+      }
+
       ctx.clearRect(0, 0, width, height);
 
       // Render soft floating particles
-      stars.forEach((star) => {
+      for (let i = 0; i < stars.length; i++) {
+        const star = stars[i];
         star.y -= star.speed;
         if (star.y < 0) {
           star.y = height;
@@ -62,15 +70,23 @@ export default function StarfieldCanvas() {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
         ctx.fill();
-      });
+      }
 
       animationFrameId = requestAnimationFrame(render);
     };
 
+    // Draw initial static frame immediately
     render();
+    cancelAnimationFrame(animationFrameId);
+
+    // Delay continuous animation loop by 600ms to free up main thread during hydration
+    const startTimeoutId = setTimeout(() => {
+      animationFrameId = requestAnimationFrame(render);
+    }, 600);
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      clearTimeout(startTimeoutId);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);

@@ -222,7 +222,6 @@ export default function TestimonialsSection() {
                         alt={testimonials[currentIndex].name}
                         width={64}
                         height={64}
-                        unoptimized
                         className="w-full h-full object-cover"
                       />
                     </div>
