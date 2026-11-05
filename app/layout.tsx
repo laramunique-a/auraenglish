@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     shortcut: '/logo-aura-icon.png',
     apple: '/logo-aura-icon.png',
   },
+  verification: {
+    google: 'WukFNcDnPALhK7G_EpQcLfXL5s4f9Axl3743JnBtxH8',
+  },
   openGraph: {
     title: 'Aura English | Expand Yourself',
     description:
