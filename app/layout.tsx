@@ -43,9 +43,13 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   icons: {
-    icon: '/logo-aura-icon.png',
-    shortcut: '/logo-aura-icon.png',
-    apple: '/logo-aura-icon.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/logo-aura-icon.png', sizes: '192x192', type: 'image/png' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/icon.png',
   },
   verification: {
     google: 'WukFNcDnPALhK7G_EpQcLfXL5s4f9Axl3743JnBtxH8',
@@ -176,8 +180,9 @@ export default function RootLayout({
       className={`${metrophobic.variable} ${comfortaa.variable} ${publicSans.variable} h-full`}
     >
       <head>
-        <link rel="icon" href="/logo-aura-icon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/logo-aura-icon.png" />
+        <link rel="icon" href="/icon.png" sizes="192x192" type="image/png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/icon.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
